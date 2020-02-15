@@ -43,10 +43,10 @@ dm_curve_pulsars_combined_array = np.empty(shape=(0,60))
 
 
 
-time_phase_pulsars_files = sorted(glob.glob('lowlat_cands/pulsars/time_phase_data_pulsars_batch_*.npy')) + sorted(glob.glob('lowlat_cands/new_batch_pulsars/time_phase_data_new_batch_pulsars_batch_*.npy'))
-freq_phase_pulsars_files = sorted(glob.glob('lowlat_cands/pulsars/freq_phase_data_pulsars_batch_*.npy')) + sorted(glob.glob('lowlat_cands/new_batch_pulsars/freq_phase_data_new_batch_pulsars_batch_*.npy'))
-pulse_profile_pulsars_files = sorted(glob.glob('lowlat_cands/pulsars/pulse_profile_data_pulsars_batch_*.npy')) + sorted(glob.glob('lowlat_cands/new_batch_pulsars/pulse_profile_data_new_batch_pulsars_batch_*.npy'))
-dm_curve_pulsars_files = sorted(glob.glob('lowlat_cands/pulsars/dm_curve_data_pulsars_batch_*.npy')) + sorted(glob.glob('lowlat_cands/new_batch_pulsars/dm_curve_data_new_batch_pulsars_batch_*.npy'))
+time_phase_pulsars_files = sorted(glob.glob('/fred/oz002/vishnu/neural_network/lowlat_cands/pulsars/time_phase_data_pulsars_batch_*.npy')) + sorted(glob.glob('/fred/oz002/vishnu/neural_network/lowlat_cands/new_batch_pulsars/time_phase_data_new_batch_pulsars_batch_*.npy'))
+freq_phase_pulsars_files = sorted(glob.glob('/fred/oz002/vishnu/neural_network/lowlat_cands/pulsars/freq_phase_data_pulsars_batch_*.npy')) + sorted(glob.glob('/fred/oz002/vishnu/neural_network/lowlat_cands/new_batch_pulsars/freq_phase_data_new_batch_pulsars_batch_*.npy'))
+pulse_profile_pulsars_files = sorted(glob.glob('/fred/oz002/vishnu/neural_network/lowlat_cands/pulsars/pulse_profile_data_pulsars_batch_*.npy')) + sorted(glob.glob('/fred/oz002/vishnu/neural_network/lowlat_cands/new_batch_pulsars/pulse_profile_data_new_batch_pulsars_batch_*.npy'))
+dm_curve_pulsars_files = sorted(glob.glob('/fred/oz002/vishnu/neural_network/lowlat_cands/pulsars/dm_curve_data_pulsars_batch_*.npy')) + sorted(glob.glob('/fred/oz002/vishnu/neural_network/lowlat_cands/new_batch_pulsars/dm_curve_data_new_batch_pulsars_batch_*.npy'))
 
 
 time_phase_pulsars_data = [np.load(f) for f in time_phase_pulsars_files]
@@ -83,10 +83,10 @@ dm_curve_nonpulsars_combined_array = np.empty(shape=(0,60))
 #dm_curve_nonpulsars_files = ['lowlat_cands/nonpulsars/dm_curve_data_nonpulsars.npy'] + sorted(glob.glob('lowlat_cands/new_batch_nonpulsars/dm_curve_data_new_batch_nonpulsars_batch_*.npy'))
 
 
-time_phase_nonpulsars_files = sorted(glob.glob('lowlat_cands/new_batch_nonpulsars/time_phase_data_new_batch_nonpulsars_batch_*.npy'))
-freq_phase_nonpulsars_files = sorted(glob.glob('lowlat_cands/new_batch_nonpulsars/freq_phase_data_new_batch_nonpulsars_batch_*.npy'))
-pulse_profile_nonpulsars_files = sorted(glob.glob('lowlat_cands/new_batch_nonpulsars/pulse_profile_data_new_batch_nonpulsars_batch_*.npy'))
-dm_curve_nonpulsars_files = sorted(glob.glob('lowlat_cands/new_batch_nonpulsars/dm_curve_data_new_batch_nonpulsars_batch_*.npy'))
+time_phase_nonpulsars_files = sorted(glob.glob('/fred/oz002/vishnu/neural_network/lowlat_cands/new_batch_nonpulsars/time_phase_data_new_batch_nonpulsars_batch_*.npy'))
+freq_phase_nonpulsars_files = sorted(glob.glob('/fred/oz002/vishnu/neural_network/lowlat_cands/new_batch_nonpulsars/freq_phase_data_new_batch_nonpulsars_batch_*.npy'))
+pulse_profile_nonpulsars_files = sorted(glob.glob('/fred/oz002/vishnu/neural_network/lowlat_cands/new_batch_nonpulsars/pulse_profile_data_new_batch_nonpulsars_batch_*.npy'))
+dm_curve_nonpulsars_files = sorted(glob.glob('/fred/oz002/vishnu/neural_network/lowlat_cands/new_batch_nonpulsars/dm_curve_data_new_batch_nonpulsars_batch_*.npy'))
 
 time_phase_nonpulsars_data = [np.load(f) for f in time_phase_nonpulsars_files]
 freq_phase_nonpulsars_data = [np.load(f) for f in freq_phase_nonpulsars_files]
@@ -131,15 +131,15 @@ reshaped_time_freq_phase_pulsars = [np.reshape(f,(68,68,1)) for f in combined_ti
 reshaped_time_freq_phase_nonpulsars = [np.reshape(f,(68,68,1)) for f in combined_time_freq_phase_nonpulsars_full_data] 
 #Load Palfa Data
 
-time_phase_pulsars_palfa_data = np.load('palfa_data/time_phase_data_palfa_data_pulsars.npy')
-freq_phase_pulsars_palfa_data = np.load('palfa_data/freq_phase_data_palfa_data_pulsars.npy')
-pulse_profile_pulsars_palfa_data = np.load('palfa_data/pulse_profile_data_palfa_data_pulsars.npy')
-dm_curve_pulsars_palfa_data = np.load('palfa_data/dm_curve_data_palfa_data_pulsars.npy')
+time_phase_pulsars_palfa_data = np.load('/fred/oz002/vishnu/neural_network/palfa_data/time_phase_data_palfa_data_pulsars.npy')
+freq_phase_pulsars_palfa_data = np.load('/fred/oz002/vishnu/neural_network/palfa_data/freq_phase_data_palfa_data_pulsars.npy')
+pulse_profile_pulsars_palfa_data = np.load('/fred/oz002/vishnu/neural_network/palfa_data/pulse_profile_data_palfa_data_pulsars.npy')
+dm_curve_pulsars_palfa_data = np.load('/fred/oz002/vishnu/neural_network/palfa_data/dm_curve_data_palfa_data_pulsars.npy')
 
-time_phase_nonpulsars_palfa_data = np.load('palfa_data/time_phase_data_palfa_data_nonpulsars.npy')
-freq_phase_nonpulsars_palfa_data = np.load('palfa_data/freq_phase_data_palfa_data_nonpulsars.npy')
-pulse_profile_nonpulsars_palfa_data = np.load('palfa_data/pulse_profile_data_palfa_data_nonpulsars.npy')
-dm_curve_nonpulsars_palfa_data = np.load('palfa_data/dm_curve_data_palfa_data_nonpulsars.npy')
+time_phase_nonpulsars_palfa_data = np.load('/fred/oz002/vishnu/neural_network/palfa_data/time_phase_data_palfa_data_nonpulsars.npy')
+freq_phase_nonpulsars_palfa_data = np.load('/fred/oz002/vishnu/neural_network/palfa_data/freq_phase_data_palfa_data_nonpulsars.npy')
+pulse_profile_nonpulsars_palfa_data = np.load('/fred/oz002/vishnu/neural_network/palfa_data/pulse_profile_data_palfa_data_nonpulsars.npy')
+dm_curve_nonpulsars_palfa_data = np.load('/fred/oz002/vishnu/neural_network/palfa_data/dm_curve_data_palfa_data_nonpulsars.npy')
 
 
 print('Total Number of Palfa Pulsar Examples is %d' %dm_curve_nonpulsars_palfa_data.shape[0])
@@ -308,12 +308,21 @@ def create_convolutional_autoencoder(input_img):
 
 # In[10]:
 
-def simple_autoencoder(input_img):
+def deep_autoencoder(input_data):
 
-    encoded = Dense(2304, activation='relu')(input_img)
-    decoded = Dense(2304, activation='sigmoid')(encoded)
-    
-    return decoded
+    model = Dense(60, activation="relu")(input_data)
+    model = Dense(30, activation="relu")(model)
+    #model = Dropout(0.3)(model)
+    #model = Dense(15, activation="relu")(model)
+    #model = Dense(8, activation="relu")(model)
+    encoded_results = model
+
+    #model = Dense(15, activation="relu")(model)
+    #model = Dense(30, activation="relu")(model)
+    #model = Dropout(0.3)(model)
+    decoded = Dense(60, activation="relu")(model)
+    return Model(inputs=input_data, outputs=decoded, name='AE'), Model(inputs=input_data, outputs=encoded_results, name='encoder')
+ 
 
 #num_classes = 1 
 ##flatten_shape = 2304,
@@ -326,69 +335,23 @@ def simple_autoencoder(input_img):
 #autoencoder.compile(optimizer='adadelta', loss='binary_crossentropy')
 #print(autoencoder.summary())
 
-encoding_dim = 256 # 32 floats -> compression of factor 24.5, assuming the input is 784 floats
 
 # this is our input placeholder
 #input_img = Input(shape=(2304,))
 #input_img = Input(shape=(2304,))
-input_img = Input(shape=input_shape)
-autoencoder, encoder = create_convolutional_autoencoder(input_img)
+#input_img = Input(shape=input_shape)
+input_data = Input(shape=(60,))
+autoencoder, encoder = deep_autoencoder(input_data)
 
 
-print(input_img)
-#
-#
-#encoded = Dense(encoding_dim, activation='relu')(input_img)
-#encoded = Dense(128, activation='relu')(encoded)
-##encoded = Dense(64, activation='relu')(encoded)
-###encoded = Dropout(0.2)(encoded)
-##encoded = Dense(32, activation='relu')(encoded)
-##
-##encoded = Dense(64, activation='relu')(encoded)
-##encoded = Dense(128, activation='relu')(encoded)
-#encoded = Dense(256, activation='relu')(encoded)
-##encoded = Dropout(0.5)(encoded)
-#decoded = Dense(2304, activation='softmax')(encoded)
-#
-#
-#
-#
-## "encoded" is the encoded representation of the input
-#
-#
-#
-##encoded = Dense(encoding_dim, activation='relu', activity_regularizer=regularizers.l1(10e-5))(input_img)
-## "decoded" is the lossy reconstruction of the input
-##decoded = Dense(2304, activation='sigmoid')(encoded)
-#autoencoder = Model(input_img, decoded)
-#encoder = Model(input_img, decoded)
-#
-#
-#encoder = Model(input_img, encoded)
-## create a placeholder for an encoded (32-dimensional) input
-#encoded_input = Input(shape=(256,))
-## retrieve the last layer of the autoencoder model
-#decoder_layer = autoencoder.layers[-1]
-## create the decoder model
-#decoder = Model(encoded_input, decoder_layer(encoded_input))
-#opt = keras.optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, amsgrad=False)
+print(input_data)
 autoencoder.compile(optimizer='adadelta', loss='binary_crossentropy')
-#
-#Eautoencoder.compile(optimizer=opt, loss='binary_crossentropy', metrics=['accuracy'])
 print(autoencoder.summary())
-# this model maps an input to its reconstruction
-#autoencoder = Model(input_img, decoded)
 # ## Do Train Test Split Correctly
-
-# In[11]:
-
 
 label_pulsars = np.ones(pulse_profile_pulsars_combined_array.shape[0], dtype=int)
 label_nonpulsars = np.zeros(pulse_profile_nonpulsars_combined_array.shape[0], dtype=int)
 
-## In[12]:
-#
-#
 # Only HTRU
 freq_phase_data_combined = np.concatenate((reshaped_freq_phase_pulsars, reshaped_freq_phase_nonpulsars), axis = 0)
 freq_phase_label_combined = np.concatenate((label_pulsars, label_nonpulsars), axis = 0)
@@ -414,13 +377,6 @@ time_freq_phase_train, time_freq_phase_test, time_freq_phase_label_train, time_f
 #mc = ModelCheckpoint('best_model.h5', monitor='val_accuracy', mode='max', verbose=1, save_best_only=True)
 
 
-## In[13]:
-#
-#
-#model.fit([time_phase_train, freq_phase_train, pulse_profile_train, dm_curve_train], freq_phase_label_train , epochs=10, validation_split=0.3)
-#model.fit([time_phase_train, pulse_profile_train, dm_curve_train], freq_phase_label_train , epochs=10, validation_split=0.3, callbacks=[es, mc])
-#model.fit([time_phase_train, dm_curve_train], freq_phase_label_train , epochs=10, validation_split=0.3, callbacks=[es, mc])
-#model.fit([time_phase_train], freq_phase_label_train , epochs=10, validation_split=0.3, callbacks=[es, mc])
 label_pulsars_palfa = np.ones(time_phase_pulsars_palfa_data.shape[0], dtype=int)
 label_nonpulsars_palfa = np.zeros(time_phase_nonpulsars_palfa_data.shape[0], dtype=int)
 
@@ -449,51 +405,53 @@ label_nonpulsars_palfa = np.zeros(time_phase_nonpulsars_palfa_data.shape[0], dty
 #mc = ModelCheckpoint('best_model_time_phase_only.h5', monitor='val_accuracy', mode='max', verbose=1, save_best_only=True)
 
 
-## In[13]:
-#
-#
 #model.fit([time_phase_train, freq_phase_train, pulse_profile_train, dm_curve_train], freq_phase_label_train , epochs=20, validation_split=0.3)
 #model.fit([time_phase_train], time_phase_label_train , epochs=20, validation_split=0.3)
-print(np.shape(time_phase_train))
 
-time_phase_train = np.array(time_phase_train)
-time_phase_test = np.array(time_phase_test)
-freq_phase_train = np.array(freq_phase_train)
-freq_phase_test = np.array(freq_phase_test)
-time_freq_phase_train = np.array(time_freq_phase_train)
-time_freq_phase_test = np.array(time_freq_phase_test)
-combined_time_freq_phase_train = np.concatenate((time_phase_pulsars_combined_array, time_phase_pulsars_combined_array), axis=1)
+
+dm_curve_test = np.array(dm_curve_test)
+dm_curve_train = np.array(dm_curve_train)
+#combined_time_freq_phase_train = np.concatenate((time_phase_pulsars_combined_array, time_phase_pulsars_combined_array), axis=1)
 #combined_time_freq_phase_test = np.hstack((time_phase_test, freq_phase_test))
 
-print(np.shape(time_phase_pulsars_combined_array))
-print(np.shape(combined_time_freq_phase_train))
 
 
-#one_image = time_phase_train[0:9]
-#one_label = time_phase_label_train[0:9]
-##one_image = np.reshape(one_image, (48,48))
-#
-#plot_images(one_image, one_label)
-#plt.imshow(one_image)
 
-#plt.savefig('time_phase_example.png')
-#print(np.shape(time_phase_train))
-#autoencoder.fit(time_freq_phase_train, time_freq_phase_train,  epochs=40, batch_size = 2048, shuffle=True, validation_split=0.3)
-#autoencoder.save_weights('auto_encoder_time_phase.h5')
-autoencoder.load_weights('auto_encoder_time_phase.h5')
-### encode and decode some digits
+autoencoder.fit(dm_curve_train, dm_curve_train,  epochs=200, batch_size = 4000, shuffle=True, validation_split=0.3)
+autoencoder.save_weights('auto_encoder_dm_curve_train.h5')
+#autoencoder.load_weights('auto_encoder_dm_curve_train.h5')
 ### note that we take them from the *test* set
-#encoded_imgs = encoder.predict(time_phase_test)
-decoded_imgs = autoencoder.predict(time_freq_phase_test)
-##print(type(encoded_imgs))
-import matplotlib.pyplot as plt
+encoded_imgs = encoder.predict(dm_curve_test)
+decoded_imgs = autoencoder.predict(dm_curve_test)
 
+
+#DM Curve
+sample_dm_curve_pulsar = dm_curve_test[22]
+sample_dm_curve_nonpulsar = decoded_imgs[22]
+
+fig, axs = plt.subplots(nrows=1, ncols=2, sharex=True, figsize=(20,8))
+ax = axs[0]
+ax.plot(sample_dm_curve_pulsar, color='black', linestyle='-.', linewidth=2)
+ax.set_title('Original Image', size=18)
+ax.set_xlabel('Phase Bins')
+ax.set_ylabel('Normalised Intensity')
+ax = axs[1]
+ax.plot(sample_dm_curve_nonpulsar, color='black', linestyle='-.', linewidth=2)
+ax.set_title('Decoded image from auto-encoder', size=18)
+ax.set_xlabel('Phase Bins')
+fig.suptitle('Normalised and Centered DM Curve', size=24)
+plt.savefig('autoencoder_dm_curve.png')
+plt.show()
+
+##print(type(encoded_imgs))
+#import matplotlib.pyplot as plt
+#
 n = 15  # how many digits we will display
 plt.figure(figsize=(20, 4))
 for i in range(n):
     # display original
     ax = plt.subplot(3, n, i + 1)
-    plt.imshow(time_freq_phase_test[i].reshape(68, 68))
+    plt.plot(dm_curve_test[i + 15])
     plt.gray()
     ax.get_xaxis().set_visible(False)
     ax.get_yaxis().set_visible(False)
@@ -506,11 +464,11 @@ for i in range(n):
     #ax.get_yaxis().set_visible(False)
     # display reconstruction
     ax = plt.subplot(2, n, i + 1 + n)
-    plt.imshow(decoded_imgs[i].reshape(68, 68))
+    plt.plot(decoded_imgs[i + 15])
     plt.gray()
     ax.get_xaxis().set_visible(False)
     ax.get_yaxis().set_visible(False)
-plt.savefig('autoencoder_time_phase.png')
+plt.savefig('autoencoder_dm_curve_multiple.png')
 plt.show()
 
 #model.load_weights('first_try.h5')
@@ -521,68 +479,68 @@ plt.show()
 ##print(encoder_flatten)
 #print(type(encoder.output))
 #
-#n_clusters=10
-#clustering_layer = ClusteringLayer(n_clusters, name='clustering')(encoder.output)
-#model = Model(inputs=encoder.input, outputs=[clustering_layer])
-## Initialize cluster centers using k-means.
-#kmeans = KMeans(n_clusters=n_clusters, n_init=20)
-#y_pred = kmeans.fit_predict(encoder.predict(time_phase_train))
-#model.get_layer(name='clustering').set_weights([kmeans.cluster_centers_])
-#y_pred_last = np.copy(y_pred)
-#print(y_pred)
-##acc = np.round(accuracy_score(time_phase_label_train, y_pred), 5)
-##recall = np.round(recall_score(time_phase_label_train, y_pred), 5)
-##precision = np.round(precision_score(time_phase_label_train, y_pred), 5)
-##fscore = np.round(f1_score(time_phase_label_train, y_pred), 5)
-##print('Acc = %.5f, recall = %.5f, precision = %.5f, fscore = %.5f' % (acc, recall, precision, fscore))
-#
-#def target_distribution(q):
-#    weight = q ** 2 / q.sum(0)
-#    return (weight.T / weight.sum(1)).T
-#
-#model.compile(optimizer=optimizers.SGD(0.01, 0.9), loss='kld')
-#loss = 0
-#index = 0
-#maxiter = 10000
-#update_interval = 120
-#index_array = np.arange(time_phase_train.shape[0])
-#tol = 0.0001
-##print(index_array)
-#for ite in range(int(maxiter)):
-#    if ite % update_interval == 0:
-#        q = model.predict(time_phase_train, verbose=1)
-#        
-#        #print(np.shape(q))
-#        p = target_distribution(q)  # update the auxiliary target distribution p
-#        # evaluate the clustering performance
-#        y_pred = q.argmax(1)
-#        if time_phase_label_test is not None:
-#            acc = np.round(accuracy_score(time_phase_label_train, y_pred), 5)
-#
-#
-#        # check stop criterion
-#        delta_label = np.sum(y_pred != y_pred_last).astype(np.float32) / y_pred.shape[0]
-#        y_pred_last = np.copy(y_pred)
-#        if ite > 0 and delta_label < tol:
-#            print('delta_label ', delta_label, '< tol ', tol)
-#            print('Reached tolerance threshold. Stopping training.')
-#            break
-#    idx = index_array[index * batch_size: min((index+1) * batch_size, time_phase_train.shape[0])]
-#    loss = model.train_on_batch(x=time_phase_train[idx], y=p[idx])
-#    index = index + 1 if (index + 1) * batch_size <= time_phase_train.shape[0] else 0
-#model.save_weights('clustering_model_results_time_phase.h5')
+n_clusters=35
+clustering_layer = ClusteringLayer(n_clusters, name='clustering')(encoder.output)
+model = Model(inputs=encoder.input, outputs=[clustering_layer])
+# Initialize cluster centers using k-means.
+kmeans = KMeans(n_clusters=n_clusters, n_init=20)
+y_pred = kmeans.fit_predict(encoder.predict(dm_curve_train))
+model.get_layer(name='clustering').set_weights([kmeans.cluster_centers_])
+y_pred_last = np.copy(y_pred)
+print(y_pred)
+#acc = np.round(accuracy_score(time_phase_label_train, y_pred), 5)
+#recall = np.round(recall_score(time_phase_label_train, y_pred), 5)
+#precision = np.round(precision_score(time_phase_label_train, y_pred), 5)
+#fscore = np.round(f1_score(time_phase_label_train, y_pred), 5)
+#print('Acc = %.5f, recall = %.5f, precision = %.5f, fscore = %.5f' % (acc, recall, precision, fscore))
+
+def target_distribution(q):
+    weight = q ** 2 / q.sum(0)
+    return (weight.T / weight.sum(1)).T
+
+model.compile(optimizer=optimizers.SGD(0.01, 0.9), loss='kld')
+loss = 0
+index = 0
+maxiter = 10000
+update_interval = 120
+index_array = np.arange(dm_curve_train.shape[0])
+tol = 0.0001
+#print(index_array)
+for ite in range(int(maxiter)):
+    if ite % update_interval == 0:
+        q = model.predict(dm_curve_train, verbose=1)
+        
+        #print(np.shape(q))
+        p = target_distribution(q)  # update the auxiliary target distribution p
+        # evaluate the clustering performance
+        y_pred = q.argmax(1)
+        if dm_curve_label_train is not None:
+            acc = np.round(accuracy_score(dm_curve_label_train, y_pred), 5)
+
+
+        # check stop criterion
+        delta_label = np.sum(y_pred != y_pred_last).astype(np.float32) / y_pred.shape[0]
+        y_pred_last = np.copy(y_pred)
+        if ite > 0 and delta_label < tol:
+            print('delta_label ', delta_label, '< tol ', tol)
+            print('Reached tolerance threshold. Stopping training.')
+            break
+    idx = index_array[index * batch_size: min((index+1) * batch_size, dm_curve_train.shape[0])]
+    loss = model.train_on_batch(x=dm_curve_train[idx], y=p[idx])
+    index = index + 1 if (index + 1) * batch_size <= dm_curve_train.shape[0] else 0
+model.save_weights('clustering_model_results_dm_curve.h5')
 #model.load_weights('clustering_model_results_time_phase.h5')
-#q = model.predict(time_phase_train, verbose=1)
-##p = target_distribution(q)  # update the auxiliary target distribution p
-##
-### evaluate the clustering performance
-#y_pred = q.argmax(1)
-#print(q)
-#print(len(y_pred), len(time_phase_label_train))
-#y_pred = np.asarray(y_pred)
-#df = pd.DataFrame({'File Name':time_phase_label_train, 'Score': y_pred})
-#print(df)
-#df.to_csv('clustering_results_8.csv', index=False)
+q = model.predict(dm_curve_test, verbose=1)
+#p = target_distribution(q)  # update the auxiliary target distribution p
+#
+## evaluate the clustering performance
+y_pred = q.argmax(1)
+print(q)
+print(len(y_pred), len(dm_curve_label_test))
+y_pred = np.asarray(y_pred)
+df = pd.DataFrame({'File Name':dm_curve_label_test, 'Score': y_pred})
+print(df)
+df.to_csv('dm_curve_clustering_results_%d.csv'%n_clusters, index=False)
 #df1 = df.loc[df['Score'] == 10]
 #df = pd.read_csv('clustering_results_8.csv')
 #index_numbers_non_pulsars = df.loc[df['Score'] == 0].index.values.astype(int)[0:15]
